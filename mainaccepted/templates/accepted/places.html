@@ -1,0 +1,441 @@
+{% extends 'accepted/base.html' %} {% load static %} {% block content %}
+
+<h2 class="placesh2">Places</h2>
+
+<div id="mapid"></div>
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Seraphine Plaza</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="aboverectangle">
+          <div class="rectangle">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    width="631px"
+                    height="355px"
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/83490830_829112547510606_5556263572947861504_n.jpg?_nc_cat=110&_nc_ohc=m7V6Ajor7mYAX9376P6&_nc_ht=scontent.fprx1-1.fna&oh=0b7e15bfb782c16dd595706256391cb5&oe=5EBC3BEB"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/74687824_756852128069982_1463750843323908096_o.jpg?_nc_cat=100&_nc_ohc=lPL4pjfF_sIAX9lhhz_&_nc_ht=scontent.fprx1-1.fna&oh=eac437c28f05e8d566228b25eb2648a9&oe=5ECF8EEE"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/64747730_664727603949102_8264986707938508800_o.jpg?_nc_cat=103&_nc_ohc=xIonJTDqdhMAX8PF8oX&_nc_ht=scontent.fprx1-1.fna&oh=2a675337ac49554b1f5e4126a755886d&oe=5EC0D66F"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <i>Foto: Facebook/Seraphine Plaza</i>
+
+        <div class="container">
+          <p id="p1">
+            Njerezit me nevoja te vecanta jane te mireseardhur gjithere dhe pa
+            dallime, gjithmone duke shpresuar nje qendrim sa me te kendshem
+          </p>
+
+          <ul id="ul1">
+            <li>Ashensori per kalimin neper kate</li>
+            <li>WC e posaqme</li>
+            <li>
+              Ne rastet e nevojshme behet percjellja e tyre ne vendin e caktuar
+            </li>
+            <li>
+              Ne hyrjen e hotelit afer shkallave, eshte edhe pjesa e posaqme e
+              kalimit per ta
+            </li>
+          </ul>
+
+          <p id="p2">
+            Keto jane disa nga sherbimet, sepse sigurisht ne sherbimin qe ju
+            behet ne akomodim, ushqim dhe kafe, Hoteli sherben ne menyren me te
+            mire dhe mirkuptuese.
+          </p>
+
+          <a href="https://www.facebook.com/seraphineplaza/">
+            <i class="fab fa-facebook"></i>
+            Seraphine Plaza
+          </a>
+
+          <br />
+
+          <a href="https://www.seraphineplaza.com">
+            <i class="fas fa-globe"></i>
+            seraphineplaza.com
+          </a>
+
+          <br />
+
+          <a href="mailto:info@seraphineplaza.com">
+            <i class="fas fa-envelope"></i>
+            info@seraphineplaza.com
+          </a>
+
+          <br />
+
+          <a href="tel:+38349760777">
+            <i class="fas fa-phone"></i>
+            +383 (0) 49 760 777
+          </a>
+        </div>
+
+        <!-- <img src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/64747730_664727603949102_8264986707938508800_o.jpg?_nc_cat=103&_nc_ohc=xIonJTDqdhMAX8PF8oX&_nc_ht=scontent.fprx1-1.fna&oh=2a675337ac49554b1f5e4126a755886d&oe=5EC0D66F" style="width: 35rem;" alt=""> -->
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Mbyll
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Shkolla Asdreni - Peje</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="aboverectangle">
+          <div class="rectangle">
+            <div
+              id="carouselExampleCaptions1"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#carouselExampleCaptions1"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions1"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions1"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    width="631px"
+                    height="355px"
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/69360547_2618881141477141_8114786423082582016_n.jpg?_nc_cat=100&_nc_ohc=qk5cB2COe3kAX-Co7o8&_nc_ht=scontent.fprx1-1.fna&oh=d7df39e3d07d0b2d1f7f385dbdce0858&oe=5ED36648"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/73140384_2730287840336470_6500245372554706944_o.jpg?_nc_cat=105&_nc_ohc=wOVGJhJQuooAX9teLhq&_nc_ht=scontent.fprx1-1.fna&oh=32452834ca004a689bc1daf108e5ee35&oe=5EBC7681"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/69607853_2615869275111661_8232255187377455104_n.jpg?_nc_cat=108&_nc_ohc=pKOXtortnCwAX-F7fFl&_nc_ht=scontent.fprx1-1.fna&oh=6b717d4f9660afc738c1787f25d08491&oe=5EC86B0F"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleCaptions1"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleCaptions1"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <i>Foto: Facebook/Shkolla Asdreni - Peje</i>
+
+        <div class="container">
+          <p id="p1">
+            Njerezit me nevoja te vecanta mund te mesojne ne kete shkolle, sepse
+            ka kushte per ta.
+          </p>
+
+          <ul id="ul1">
+            <li>Kushte per mesim</li>
+            <li>WC</li>
+            <li>
+              Ne hyrjen e shkolles afer shkallave, eshte edhe pjesa e posaqme e
+              kalimit per ta.
+            </li>
+          </ul>
+
+          <p id="p2">
+            Ne kete shkolle ka kushte per mesim, per Njerezit me nevoja te
+            vecanta. Poashtu mbahen aktivitete te ndryshme, per festa, per diten
+            e shkolles, etj.
+          </p>
+
+          <a href="https://www.facebook.com/ShkollaAsdreni.Peje/">
+            <i class="fab fa-facebook"></i>
+            Shkolla Asdreni - Peje
+          </a>
+        </div>
+
+        <!-- <img src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/64747730_664727603949102_8264986707938508800_o.jpg?_nc_cat=103&_nc_ohc=xIonJTDqdhMAX8PF8oX&_nc_ht=scontent.fprx1-1.fna&oh=2a675337ac49554b1f5e4126a755886d&oe=5EC0D66F" style="width: 35rem;" alt=""> -->
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Mbyll
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Hotel Dukagjini</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="aboverectangle">
+          <div class="rectangle">
+            <div
+              id="carouselExampleCaptions2"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#carouselExampleCaptions2"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions2"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleCaptions2"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    width="631px"
+                    height="355px"
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/84086188_10157031232371687_3897387808406372352_n.jpg?_nc_cat=104&_nc_ohc=ufGzrkJJDmIAX-Lh68P&_nc_ht=scontent.fprx1-1.fna&oh=7467388f21a0360678fefec8d5686e6d&oe=5EDBB9EC"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/72233370_10156703979976687_3265561315590012928_o.jpg?_nc_cat=102&_nc_ohc=Cijml_629esAX-KZPQd&_nc_ht=scontent.fprx1-1.fna&oh=4852454e2f959e43ef9f46d65978cac4&oe=5ECE5658"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/72696634_10156703980131687_827443458372272128_o.jpg?_nc_cat=108&_nc_ohc=LJYQlSw0b7QAX_x5lgZ&_nc_ht=scontent.fprx1-1.fna&oh=0d8265b9a68440a7121ff4d0b7557db0&oe=5EC6F368"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleCaptions2"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleCaptions2"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <i>Foto: Facebook/Hotel Dukagjini</i>
+
+        <div class="container">
+          <p id="p1">
+            Pas renovimit më ambicioz të hotelit në historinë e Kosovës,
+            Hotel Dukagjini, si pjesë e Dukagjini Group, merr vendin e
+            tij në zemër të Pejës. Një ikonë që nga viti 1956, Hotel Dukagjini
+            gjithmonë është njohur si një nga hotelet kryesorë në Kosovë. Hoteli
+            bashkon në mënyrë të përsosur elemente origjinale dhe të reja ndërsa
+            brendshme të reja mahnitëse shkëlqejnë me elegancë dhe shkëlqim të
+            përjetshëm.
+          </p>
+
+          <ul id="ul1">
+            <li>Akses per karroce</li>
+            <li>WC</li>
+            <li>Ashensor</li>
+            <li>
+              Ne hyrjen e Hotelit afer shkallave, eshte edhe pjesa e posaqme e
+              kalimit per ta.
+            </li>
+          </ul>
+
+          <p id="p2">
+            Ne kete hotel ka kushte per fjetje, dhe sherbime tjera, per Njerezit me nevoja te
+            vecanta. Poashtu ka edhe ashensor. Gjindet ne mes te korzes ne Peje.
+          </p>
+
+          <a href="https://www.facebook.com/hoteldukagjini/">
+            <i class="fab fa-facebook"></i>
+            Hotel Dukagjini
+          </a>
+
+          <br />
+
+          <a href="mailto:info@hoteldukagjini.com">
+            <i class="fas fa-envelope"></i>
+            info@hoteldukagjini.com
+          </a>
+
+          <br />
+
+          <a href="tel:+38349766140">
+            <i class="fas fa-phone"></i>
+            +383 (0) 49 766 140
+          </a>
+
+        </div>
+
+        <!-- <img src="https://scontent.fprx1-1.fna.fbcdn.net/v/t1.0-9/64747730_664727603949102_8264986707938508800_o.jpg?_nc_cat=103&_nc_ohc=xIonJTDqdhMAX8PF8oX&_nc_ht=scontent.fprx1-1.fna&oh=2a675337ac49554b1f5e4126a755886d&oe=5EC0D66F" style="width: 35rem;" alt=""> -->
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Mbyll
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

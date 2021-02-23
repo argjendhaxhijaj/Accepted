@@ -1,0 +1,29 @@
+{% extends 'accepted/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="events">
+
+<h1>Events</h1>
+
+<div class="card-deck">
+{% for event in events %}
+
+<div class="card mb-3">
+  <img class="card-img-top img-fluid" src="https://www.and.org.au/data/Header_images/Header---IDPWD.jpg" alt="Card image cap">
+  <div class="card-body">
+    <i> Nga: {{ event.organisation }} </i>
+      <h4 class="card-title">{{ event.title }}</h4>
+      <p class="card-text">{{ event.description }}</p>
+  </div>
+</div>
+<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+<div class="w-100 d-none d-md-block d-lg-none"><!-- wrap every 3 on md--></div>
+<div class="w-100 d-none d-sm-block d-md-none"><!-- wrap every 2 on sm--></div>
+<div class="w-100 d-none d-lg-block d-xl-none"><!-- wrap every 4 on lg--></div>
+
+{% endfor %}
+</div>
+</div>
+
+{% endblock content %}
